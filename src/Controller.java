@@ -42,7 +42,7 @@ import java.util.Scanner;
 public class Controller {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Scanner scanner = new Scanner(System.in);
-        DatabaseConnect dbc = new DatabaseConnect();
+        DatabaseConnector dbc = new DatabaseConnector();
         int id;
         String employeePassword, url, username, dbPassword;
         int choice;
@@ -89,7 +89,7 @@ public class Controller {
 }
 
 // this class does all the work, from connecting to the database to executing queries
-class DatabaseConnect {
+class DatabaseConnector {
     Employee employee1 = new Employee();
     Connection con = null;
     Scanner scanner = new Scanner(System.in);
